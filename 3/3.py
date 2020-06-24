@@ -64,39 +64,27 @@ class Complex:
 
     def _complex(self):
 
-        return (f'{self.first} + {self.second}j')
+        return (complex(self.first, self.second))
 
     def __add__(self, other):
         first = self.first + other.first
         second = self.second + other.second
-        if second < 0:
-            return (f'{first} - {abs(second)}j')
-        else:
-            return (f'{first} + {second}j')
+        return(complex(first, second))
 
     def __sub__(self, other):
         first = self.first - other.first
         second = self.second - other.second
-        if second < 0:
-            return(f'{first} - {abs(second)}j')
-        else:
-            return (f'{first} + {second}j')
+        return(complex(first, second))
 
     def __mul__(self, other):
         first = self.first * other.first
         second = self.second * other.second
-        if second < 0:
-            return (f'{first} - {abs(second)}j')
-        else:
-            return (f'{first} + {second}j')
+        return(complex(first, second))
 
     def __truediv__(self, other):
         first = self.first / other.first
         second = self.second / other.second
-        if second < 0:
-            return (f'{first} - {abs(second)}j')
-        else:
-            return (f'{first} + {second}j')
+        return(complex(first, second))
 
 
 print('-------------Complex-------------')

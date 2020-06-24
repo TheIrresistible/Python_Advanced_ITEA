@@ -8,11 +8,11 @@ def repeater(repeats):
 
         def wraper(*args):
             start_time = time.time()
-
+            print('Function is wrapping')
             for i in range(repeats):
 
                 print(func(*args))
-
+            print('Function is wrapped')
             end_time = time.time()
             execution_time = end_time - start_time
             print(f'Function {func.__name__} has been {repeats}')
@@ -22,7 +22,7 @@ def repeater(repeats):
     return time_decorator
 
 
-@repeater(40)
+@repeater(10)
 def multiply(n, m):
     n += random.randint(1, 11)
     return n * m
